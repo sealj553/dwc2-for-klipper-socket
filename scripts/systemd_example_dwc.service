@@ -1,0 +1,11 @@
+# Systemd service file for dwc2 web interface
+[Unit]
+Description=DWC Interface
+After=klipper.service
+
+[Service]
+ExecStart=/usr/bin/python3 /home/pi/dwc2-for-klipper-socket/web_dwc2.py
+WorkingDirectory=/home/pi/dwc2-for-klipper-socket
+
+[Install]
+WantedBy=multi-user.target
